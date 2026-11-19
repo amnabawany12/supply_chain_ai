@@ -1,0 +1,7 @@
+
+supplier_id,supplier_name,product,price_per_unit,delivery_days,reliability,available_quantity,location
+S001,ABC Supplies,Electronics,500,12,60,100,Karachi
+S002,Global Parts,Electronics,550,4,95,800,Lahore
+S003,Prime Traders,Electronics,480,7,85,600,Islamabad
+S004,Tech Components,Electronics,530,3,98,1000,Karachi
+S005,Smart Suppliers,Electronics,490,6,90,400,Lahore

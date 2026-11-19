@@ -1,0 +1,6 @@
+
+warehouse_id,warehouse_name,location,product,available_stock
+W001,Karachi Warehouse,Karachi,Electronics,100
+W002,Lahore Warehouse,Lahore,Electronics,250
+W003,Islamabad Warehouse,Islamabad,Electronics,150
+W004,Multan Warehouse,Multan,Electronics,80

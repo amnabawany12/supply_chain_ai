@@ -1,0 +1,6 @@
+
+shipment_id,product,quantity,origin,destination,status,delay_days,supplier
+SH101,Electronics,500,Karachi,Lahore,Delayed,9,ABC Supplies
+SH102,Electronics,200,Lahore,Islamabad,In Transit,0,Global Parts
+SH103,Electronics,300,Karachi,Multan,At Risk,4,Prime Traders
+SH104,Electronics,150,Islamabad,Karachi,Delivered,0,Tech Components

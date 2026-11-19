@@ -1,0 +1,252 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>SupplyChain AI</title>
+
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+
+<body>
+
+    <div class="sidebar">
+
+        <h2>SupplyChain AI</h2>
+
+        <p class="subtitle">Crisis Management System</p>
+
+        <nav>
+            <a href="#overview">Overview</a>
+            <a href="#analysis">Crisis Analysis</a>
+            <a href="#agents">AI Agents</a>
+            <a href="#results">Recovery Report</a>
+        </nav>
+
+        <div class="sidebar-bottom">
+            <span class="online-dot"></span>
+            System Ready
+        </div>
+
+    </div>
+
+
+    <main>
+
+        <header>
+            <div>
+                <h1>Supply Chain Dashboard</h1>
+                <p>Monitor disruptions and generate intelligent recovery strategies.</p>
+            </div>
+
+            <span class="status">AI System Online</span>
+        </header>
+
+
+        <section id="overview">
+
+            <h2>Overview</h2>
+
+            <div class="stats">
+
+                <div class="stat-card">
+                    <p>AI Agents</p>
+                    <h2>6</h2>
+                    <span>Specialized Agents</span>
+                </div>
+
+                <div class="stat-card">
+                    <p>Data Sources</p>
+                    <h2>3</h2>
+                    <span>CSV Datasets</span>
+                </div>
+
+                <div class="stat-card">
+                    <p>AI Framework</p>
+                    <h2>CrewAI</h2>
+                    <span>Multi-Agent System</span>
+                </div>
+
+                <div class="stat-card">
+                    <p>AI Provider</p>
+                    <h2>Groq</h2>
+                    <span>LLM Integration</span>
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <section id="analysis" class="panel">
+
+            <h2>Analyze Supply Chain Crisis</h2>
+
+            <p class="description">
+                Enter your shipment and supplier information
+                to start the multi-agent investigation.
+            </p>
+
+            <form id="crisisForm">
+
+                <div class="form-grid">
+
+                    <div>
+                        <label>Product Name</label>
+                        <input
+                            type="text"
+                            id="product"
+                            value="Electronics"
+                            required
+                        >
+                    </div>
+
+                    <div>
+                        <label>Required Quantity</label>
+                        <input
+                            type="number"
+                            id="quantity"
+                            value="500"
+                            min="1"
+                            required
+                        >
+                    </div>
+
+                    <div>
+                        <label>Current Supplier</label>
+                        <input
+                            type="text"
+                            id="supplier"
+                            value="ABC Supplies"
+                            required
+                        >
+                    </div>
+
+                    <div>
+                        <label>Shipment Delay (Days)</label>
+                        <input
+                            type="number"
+                            id="delay"
+                            value="9"
+                            min="0"
+                            required
+                        >
+                    </div>
+
+                    <div>
+                        <label>Required Delivery Deadline (Days)</label>
+                        <input
+                            type="number"
+                            id="deadline"
+                            value="5"
+                            min="1"
+                            required
+                        >
+                    </div>
+
+                    <div class="full-width">
+                        <label>Describe the Crisis</label>
+                        <textarea
+                            id="problem"
+                            rows="4"
+                            required
+                        >The original supplier has failed to deliver the required electronic components. The company needs an alternative supplier and a recovery strategy to meet the delivery deadline.</textarea>
+                    </div>
+
+                </div>
+
+                <button type="submit" id="analyzeBtn">
+                    Analyze Crisis with AI Agents
+                </button>
+
+            </form>
+
+        </section>
+
+
+        <section id="agents">
+
+            <h2>Our AI Agents</h2>
+
+            <div class="agent-grid">
+
+                <div class="agent-card">
+                    <span>01</span>
+                    <h3>Crisis Analyst</h3>
+                    <p>Detects and classifies supply chain disruptions.</p>
+                </div>
+
+                <div class="agent-card">
+                    <span>02</span>
+                    <h3>Supplier Researcher</h3>
+                    <p>Finds alternative suppliers and compares prices.</p>
+                </div>
+
+                <div class="agent-card">
+                    <span>03</span>
+                    <h3>Inventory Analyst</h3>
+                    <p>Checks warehouse stock and product shortages.</p>
+                </div>
+
+                <div class="agent-card">
+                    <span>04</span>
+                    <h3>Logistics Optimizer</h3>
+                    <p>Evaluates transportation costs and delivery time.</p>
+                </div>
+
+                <div class="agent-card">
+                    <span>05</span>
+                    <h3>Risk Assessment</h3>
+                    <p>Evaluates risks and compares possible solutions.</p>
+                </div>
+
+                <div class="agent-card">
+                    <span>06</span>
+                    <h3>Recovery Manager</h3>
+                    <p>Generates the final recovery strategy.</p>
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <section id="results" class="panel">
+
+            <h2>AI Recovery Report</h2>
+
+            <div id="loading" class="loading hidden">
+                <div class="spinner"></div>
+                <p>Our six AI agents are investigating your crisis...</p>
+                <p>This may take a few minutes.</p>
+            </div>
+
+            <div id="report" class="report">
+                Your recovery report will appear here after analysis.
+            </div>
+
+            <a
+                id="pdfLink"
+                class="pdf-button hidden"
+                href="#"
+                target="_blank"
+            >
+                Download PDF Report
+            </a>
+
+        </section>
+
+
+        <footer>
+            SupplyChain AI | Multi-Agent Crisis Management System
+        </footer>
+
+    </main>
+
+    <script src="/static/script.js"></script>
+
+</body>
+</html>
