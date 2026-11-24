@@ -1,4 +1,4 @@
-
+<!-- 
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -352,5 +352,369 @@ form.addEventListener("submit", async function(event) {
 
 </script>
 
+</body>
+</html> -->
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SupplyChain AI | Crisis Management</title>
+    <link rel="stylesheet" href="/static/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<div class="app">
+
+    <!-- SIDEBAR -->
+    <aside class="sidebar">
+        <div class="brand">
+            <div class="brand-icon">S</div>
+            <div>
+                <h2>SupplyChain<span>AI</span></h2>
+                <small>INTELLIGENT LOGISTICS</small>
+            </div>
+        </div>
+
+        <div class="nav-label">WORKSPACE</div>
+
+        <a href="#" class="nav-item active">
+            <span>▦</span> Dashboard
+        </a>
+
+        <a href="#analysis" class="nav-item">
+            <span>⌕</span> Crisis Analysis
+        </a>
+
+        <a href="#results" class="nav-item">
+            <span>▤</span> Recovery Reports
+        </a>
+
+        <div class="sidebar-bottom">
+            <div class="system-card">
+                <div class="online-dot"></div>
+                <div>
+                    <strong>System Online</strong>
+                    <small>AI services available</small>
+                </div>
+            </div>
+
+            <div class="sidebar-footer">
+                <div class="avatar">AI</div>
+                <div>
+                    <strong>AI Control Center</strong>
+                    <small>Admin Dashboard</small>
+                </div>
+            </div>
+        </div>
+    </aside>
+
+    <!-- MAIN CONTENT -->
+    <main class="main-content">
+
+        <header class="topbar">
+            <div>
+                <div class="breadcrumb">Workspace / Dashboard</div>
+                <h1>Supply Chain Dashboard</h1>
+                <p>Monitor disruptions and generate intelligent recovery strategies.</p>
+            </div>
+
+            <div class="topbar-right">
+                <div class="live-status">
+                    <span></span> LIVE SYSTEM
+                </div>
+                <div class="top-avatar">SC</div>
+            </div>
+        </header>
+
+        <section class="welcome-banner">
+            <div class="welcome-content">
+                <div class="welcome-tag">✦ AI POWERED MANAGEMENT</div>
+                <h2>Take Control of Your <br>Supply Chain Operations.</h2>
+                <p>
+                    Detect supply chain risks, analyze disruptions and
+                    generate smart recovery strategies with AI agents.
+                </p>
+                <a href="#analysis" class="primary-button">
+                    Start Crisis Analysis <span>→</span>
+                </a>
+            </div>
+
+            <div class="banner-visual">
+                <div class="visual-circle circle-one"></div>
+                <div class="visual-circle circle-two"></div>
+                <div class="visual-center">✧</div>
+                <div class="visual-label label-one">AI ANALYSIS</div>
+                <div class="visual-label label-two">SMART LOGISTICS</div>
+                <div class="visual-label label-three">RISK CONTROL</div>
+            </div>
+        </section>
+
+        <!-- STAT CARDS -->
+        <section class="stats-grid">
+
+            <div class="stat-card">
+                <div class="stat-top">
+                    <span>System Status</span>
+                    <div class="stat-icon green">✓</div>
+                </div>
+                <h2 id="systemStatus">Checking...</h2>
+                <p><span class="green-text">●</span> Backend connectivity</p>
+            </div>
+
+            <div class="stat-card">
+                <div class="stat-top">
+                    <span>AI Agents</span>
+                    <div class="stat-icon purple">✧</div>
+                </div>
+                <h2>06</h2>
+                <p>Powered by CrewAI</p>
+            </div>
+
+            <div class="stat-card">
+                <div class="stat-top">
+                    <span>Analysis Engine</span>
+                    <div class="stat-icon blue">⌘</div>
+                </div>
+                <h2>Active</h2>
+                <p>Multi-agent intelligence</p>
+            </div>
+
+            <div class="stat-card">
+                <div class="stat-top">
+                    <span>Report Generation</span>
+                    <div class="stat-icon orange">▤</div>
+                </div>
+                <h2>PDF</h2>
+                <p>Downloadable reports</p>
+            </div>
+
+        </section>
+
+        <!-- ANALYSIS SECTION -->
+        <section class="analysis-section" id="analysis">
+
+            <div class="section-heading">
+                <div>
+                    <div class="section-tag">INTELLIGENT ANALYSIS</div>
+                    <h2>Analyze Supply Chain Crisis</h2>
+                    <p>Provide shipment details to start your AI-powered analysis.</p>
+                </div>
+                <div class="required-label">* Required fields</div>
+            </div>
+
+            <div class="analysis-layout">
+
+                <!-- FORM -->
+                <div class="form-card">
+
+                    <div class="card-heading">
+                        <div class="heading-icon">⌘</div>
+                        <div>
+                            <h3>Crisis Information</h3>
+                            <p>Enter the details of your supply chain disruption.</p>
+                        </div>
+                    </div>
+
+                    <form id="crisisForm">
+
+                        <div class="form-grid">
+
+                            <div class="form-group">
+                                <label for="product">Product Name *</label>
+                                <input type="text" id="product"
+                                    placeholder="e.g. Electronic Components"
+                                    maxlength="100" required>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="quantity">Affected Quantity *</label>
+                                <input type="number" id="quantity"
+                                    placeholder="e.g. 5000"
+                                    min="1" max="1000000" required>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="supplier">Supplier Name *</label>
+                                <input type="text" id="supplier"
+                                    placeholder="e.g. Global Suppliers Ltd."
+                                    maxlength="100" required>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="delayDays">Shipment Delay (Days) *</label>
+                                <input type="number" id="delayDays"
+                                    placeholder="e.g. 12"
+                                    min="0" max="365" required>
+                            </div>
+
+                            <div class="form-group full-width">
+                                <label for="deadlineDays">Delivery Deadline (Days) *</label>
+                                <input type="number" id="deadlineDays"
+                                    placeholder="e.g. 20"
+                                    min="1" max="365" required>
+                            </div>
+
+                            <div class="form-group full-width">
+                                <label for="problem">Describe the Crisis *</label>
+                                <textarea id="problem"
+                                    placeholder="Describe the supply chain problem, shipment delays, supplier failures, inventory shortages or any other disruption..."
+                                    minlength="5" maxlength="2000"
+                                    rows="5" required></textarea>
+                                <div class="input-hint">
+                                    Provide as much relevant information as possible.
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <div class="form-actions">
+                            <button type="reset" class="reset-button" id="resetButton">
+                                ↺ Reset Form
+                            </button>
+
+                            <button type="submit" class="analyze-button" id="analyzeButton">
+                                <span>✧</span> Analyze Crisis <span>→</span>
+                            </button>
+                        </div>
+
+                    </form>
+                </div>
+
+                <!-- SIDE INFO -->
+                <div class="info-column">
+
+                    <div class="agents-card">
+                        <div class="side-card-heading">
+                            <h3>AI Agent Network</h3>
+                            <span class="network-badge">6 AGENTS</span>
+                        </div>
+
+                        <p>Collaborative intelligence powered by CrewAI.</p>
+
+                        <div class="agent-item">
+                            <div class="agent-icon">⌕</div>
+                            <div>
+                                <strong>Crisis Detection</strong>
+                                <small>Identifies disruptions</small>
+                            </div>
+                        </div>
+
+                        <div class="agent-item">
+                            <div class="agent-icon">◈</div>
+                            <div>
+                                <strong>Supplier Research</strong>
+                                <small>Explores alternatives</small>
+                            </div>
+                        </div>
+
+                        <div class="agent-item">
+                            <div class="agent-icon">▤</div>
+                            <div>
+                                <strong>Inventory Analysis</strong>
+                                <small>Evaluates stock impact</small>
+                            </div>
+                        </div>
+
+                        <div class="agent-item">
+                            <div class="agent-icon">⇄</div>
+                            <div>
+                                <strong>Logistics Optimization</strong>
+                                <small>Plans delivery solutions</small>
+                            </div>
+                        </div>
+
+                        <div class="agent-item">
+                            <div class="agent-icon">⚠</div>
+                            <div>
+                                <strong>Risk Assessment</strong>
+                                <small>Evaluates potential risks</small>
+                            </div>
+                        </div>
+
+                        <div class="agent-item">
+                            <div class="agent-icon">✧</div>
+                            <div>
+                                <strong>Recovery Planning</strong>
+                                <small>Recommends recovery actions</small>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="tip-card">
+                        <div class="tip-icon">✦</div>
+                        <div>
+                            <strong>AI Intelligence Tip</strong>
+                            <p>Detailed crisis information helps AI agents generate more relevant recovery recommendations.</p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- LOADING SECTION -->
+        <section class="loading-section" id="loadingSection" hidden>
+            <div class="loader"></div>
+            <h2>AI Agents Are Analyzing Your Crisis</h2>
+            <p id="loadingText">Connecting to the analysis engine...</p>
+            <div class="loading-track">
+                <div class="loading-bar"></div>
+            </div>
+            <small>Please wait while the analysis is being generated.</small>
+        </section>
+
+        <!-- RESULTS -->
+        <section class="results-section" id="results" hidden>
+
+            <div class="section-heading result-heading">
+                <div>
+                    <div class="section-tag">ANALYSIS COMPLETED</div>
+                    <h2>Recovery Analysis Report</h2>
+                    <p>Your AI-generated supply chain crisis assessment.</p>
+                </div>
+
+                <div class="success-badge">✓ Analysis Successful</div>
+            </div>
+
+            <div class="result-card">
+                <div class="result-card-header">
+                    <div>
+                        <div class="result-icon">✧</div>
+                        <h3>AI Recovery Recommendations</h3>
+                    </div>
+                    <span class="report-type">GENERATED REPORT</span>
+                </div>
+
+                <div id="reportContent" class="report-content"></div>
+
+                <div class="result-actions">
+                    <button id="copyButton" class="reset-button">
+                        ▣ Copy Report
+                    </button>
+                    <a id="downloadButton" class="download-button" href="#" target="_blank">
+                        ↓ Download PDF Report
+                    </a>
+                </div>
+            </div>
+
+        </section>
+
+        <footer class="footer">
+            <p>© 2026 SupplyChain AI. Intelligent Crisis Management Platform.</p>
+            <p>Powered by FastAPI & CrewAI</p>
+        </footer>
+
+    </main>
+</div>
+
+<div id="toast" class="toast"></div>
+
+<script src="/static/script.js"></script>
 </body>
 </html>
